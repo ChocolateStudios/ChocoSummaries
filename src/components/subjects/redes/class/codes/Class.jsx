@@ -6,8 +6,6 @@ import Section3_ModelosYProtocolos from "./Section3_ModelosYProtocolos";
 import Section4_DireccionamientoIpYRedesLan from "./Section4_DireccionamientoIpYRedesLan";
 
 function Class() {
-  console.log("Cargó Class.jsx")
-
   return (
     <div>
       <Index></Index>

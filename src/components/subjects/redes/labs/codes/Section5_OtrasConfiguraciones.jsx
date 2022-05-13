@@ -6,9 +6,9 @@ function Section5_OtrasConfiguraciones() {
   
     return (
       <div>
-        <h1>Otras configuraciones</h1>
+        <h1 id="others">Otras configuraciones</h1>
 
-        <h2>Configuración de los routers en una red WAN</h2>
+        <h2 id="others-conf-router-wan">Configuración de los routers en una red WAN</h2>
 
         <h3>Paso 1: identificar direcciones ips</h3>
         <div style={{backgroundColor: "#E9E9E9"}}>
@@ -39,6 +39,9 @@ function Section5_OtrasConfiguraciones() {
         </div>
         <img src={config_routers_wan_save} style={{width: 420, marginLeft: 17}}/>
 
+        <br/><br/>
+        <a href="#id0">Volver a índice</a>
+        <br/><br/>
       </div>
     );
   }

@@ -10,7 +10,7 @@ function Redes() {
   const selectNothing = () => { setSelectedOption('0'); };
 
   return (
-    <div style={{marginTop: 10, marginLeft: 10}}>
+    <div style={{marginTop: 10, marginBottom: 20 }}>
       {
         (selectedOption == '0') ? (
           <div>

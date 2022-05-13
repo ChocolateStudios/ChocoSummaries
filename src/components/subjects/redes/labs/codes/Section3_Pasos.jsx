@@ -3,16 +3,16 @@ function Section3_Pasos() {
     return (
       <div>
 
-      <h1>Pasos</h1>
+      <h1 id="pasos">Pasos</h1>
 
-      <h2>Ver configuración de router</h2>
+      <h2 id="pasos-ver-conf">Ver configuración</h2>
 
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>show run</p>
       </div>
 
-      <h2>Asignar dirección ip en interfaz del router</h2>
+      <h2 id="pasos-asign-ip-int">Asignar dirección ip en interfaz</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -22,13 +22,13 @@ function Section3_Pasos() {
         <p>end</p>
       </div>
 
-      <h2>Ver estado actual de las interfaces del router</h2>
+      <h2 id="pasos-ver-estado-int">Ver estado actual de las interfaces</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>show ip int br</p>
       </div>
 
-      <h2>Asignar dirección ip en vlan de switch</h2>
+      <h2 id="pasos-asign-ip-vlan">Asignar dirección ip en vlan de switch</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -38,7 +38,7 @@ function Section3_Pasos() {
         <p>end</p>
       </div>
 
-      <h2>Asignar default gateway en switch</h2>
+      <h2 id="pasos-asign-default-gateway">Asignar default gateway en switch</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -46,7 +46,7 @@ function Section3_Pasos() {
         <p>end</p>
       </div>
 
-      <h2>Rip en router</h2>
+      <h2 id="pasos-rip-router">Rip en router</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -56,24 +56,24 @@ function Section3_Pasos() {
         <p>end</p>
       </div>
 
-      <h2>Verificar versión del sistema operativo</h2>
+      <h2 id="pasos-ver-version-SO">Verificar versión del sistema operativo</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>show version</p>
       </div>
 
-      <h2>Verificar detalles de las vlans de un switch</h2>
+      <h2 id="pasos-ver-vlans">Verificar detalles de las vlans de un switch</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>show vlan brief</p>
       </div>
 
-      <h2>Verificar detalles de los trunks de un switch</h2>
+      <h2 id="pasos-ver-trunks">Verificar detalles de los trunks de un switch</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>show interface trunk</p>
       </div>
 
-      <h2>Crear vlan y asignar nombre</h2>
+      <h2 id="pasos-crear-vlan">Crear vlan y asignar nombre</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -82,7 +82,7 @@ function Section3_Pasos() {
         <p>exit</p>
       </div>
 
-      <h2>Eliminar vlan</h2>
+      <h2 id="pasos-eliminar-vlan">Eliminar vlan</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>vlan database</p>
@@ -90,7 +90,7 @@ function Section3_Pasos() {
         <p>exit</p>
       </div>
 
-      <h2>Asignar puerto a una vlan</h2>
+      <h2 id="pasos-asign-port-vlan">Asignar puerto a una vlan</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -100,7 +100,7 @@ function Section3_Pasos() {
         <p>exit</p>
       </div>
 
-      <h2>Asignar vlan de voz</h2>
+      <h2 id="pasos-asign-vlan-voz">Asignar vlan de voz</h2>
       - Se habilita calidad de servicio (QoS) y se confía en los valores de la clase de servicio (CoS)
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
@@ -110,7 +110,7 @@ function Section3_Pasos() {
         <p>switchport voice vlan 150</p>
       </div>
 
-      <h2>Realizar trunk en un puerto en switch</h2>
+      <h2 id="pasos-trunk-port">Realizar trunk en un puerto en switch</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -119,7 +119,7 @@ function Section3_Pasos() {
         <p>switchport trunk allowed vlan all</p>
       </div>
 
-      <h2>Realizar trunk en un puerto con vlan nativa en switch</h2>
+      <h2 id="pasos-trunk-port-vlan-native">Realizar trunk en un puerto con vlan nativa en switch</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -128,27 +128,27 @@ function Section3_Pasos() {
         <p>trunk native vlan 99</p>
       </div>
 
-      <h2>Borrar configuración de vlans en switch</h2>
+      <h2 id="pasos-borrar-conf-vlans">Borrar configuración de vlans en switch</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>delete flash:vlan.dat</p>
       </div>
 
-      <h2>Borrar configuración de switch</h2>
+      <h2 id="pasos-borrar-conf">Borrar configuración de switch</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>delete erase startup-config</p>
         <p>reload</p>
       </div>
 
-      <h2>Crear subinterfaz en router</h2>
+      <h2 id="pasos-crear-subint">Crear subinterfaz en router</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
         <p>int fa0/0.10</p>
       </div>
 
-      <h2>Encapsular subinterfaz de router</h2>
+      <h2 id="pasos-encap-int">Encapsular subinterfaz de router</h2>
       <div style={{backgroundColor: "#E9E9E9"}}>
         <p>enable</p>
         <p>conf t</p>
@@ -156,6 +156,9 @@ function Section3_Pasos() {
         <p>encapsulation dot1Q 10</p>
       </div>
 
+      <a href="#id0">Volver a índice</a>
+        <br/><br/>
+        
       </div>
     );
   }

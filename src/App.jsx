@@ -1,17 +1,28 @@
 import React from "react";
-import Content from "./components/Content";
+import { Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
 import TopBar from "./components/TopBar";
+import Subjects from "./components/subjects/Subjects.jsx"
 
 function App() {
-  const [selectedOption, setSelectedOption] = React.useState('0');
-  
-  const selectNothing = () => { setSelectedOption('0'); };
-  const selectRedes = () => { setSelectedOption('1'); };
 
   return (
-    <div>
-      <TopBar selectNothing={selectNothing}></TopBar>
-      <Content selectedOption={selectedOption} selectNothing={selectNothing} selectRedes={selectRedes}></Content>
+    <div style={{ height: '100%' }}>
+      <TopBar ></TopBar>
+      <Routes>
+        <Route path="/" element={
+          <Home />
+        }
+        />
+        <Route path="subjects/*" element={
+          <Subjects />}
+        />
+        <Route path="*" element={
+          <div>
+            <h1>Raios no hay nada :C</h1>
+          </div>}
+        />
+      </Routes>
     </div>
   );
 }

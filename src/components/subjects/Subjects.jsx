@@ -1,21 +1,44 @@
-import React from 'react';
-import Button from '@mui/material/Button'
+import { Paper } from "@mui/material";
+import { Routes, Route, Link } from "react-router-dom";
+import Button from '@mui/material/Button';
 import Redes from "./redes/Redes";
-import "./Subjects.css"
+import Complejidad from "./complejidad/Complejidad";
+import Estadistica from "./estadistica/Estadistica";
+import "./Subjects.css";
+import BackButton from "../auxiliar/BackButton";
 
-function Subjects(props) {
+function Subjects() {
 
     return (
-        (props.selectedOption == '0') ? (
-            <div className='subject-container'>
-                <Button variant="outlined" onClick={props.selectRedes} style={{marginTop: 10, marginBottom: 20}}>Redes</Button>
-            </div>
-        ) : (props.selectedOption == '1') ? (
-            <div className='subject-container'>
-                <Redes></Redes>
-            </div>
-        ) : ('')
+        <div className="content-container">
+            <Paper elevation={3}>
+                <div className="subject-container">
+                    <BackButton to="/" />
+                    <Routes>
+                        <Route path="redes/*" element={<Redes />} />
+                        <Route path="complejidad/*" element={<Complejidad />} />
+                        <Route path="estadistica/*" element={<Estadistica />} />
+                    </Routes>
+                </div>
+            </Paper>
+        </div>
     );
 }
 
 export default Subjects;
+
+
+        // <div className="subject-container">
+        //     <Paper elevation={3}>
+        //         <Button variant="outlined" onClick={selectNothing} style={{ position: 'absolute', left: 20, top: 83 }}>Volver</Button>
+        //         {(props.subject === 'redes') ? (
+        //             <Redes />
+        //         ) : (props.subject === 'complejidad') ? (
+        //             <Complejidad />
+        //         ) : (props.subject === 'estadistica') ? (
+        //             <Estadistica />
+        //         ) : (
+        //             ''
+        //         )}
+        //     </Paper>
+        // </div>

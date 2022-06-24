@@ -109,7 +109,12 @@ function Dictionary() {
             <li><h3 id="dict-otros-vlsm">VLSM</h3>
                 <ul><li>Máscara de subred de tamaño variable</li>
                     <li>Subred de una subnet</li>
-                    <li>Dividir una red en subredes</li></ul></li></ul>
+                    <li>Dividir una red en subredes</li></ul></li>
+            
+            <li><h3 id="dict-otros-dsl">DSL</h3>
+                <ul><li>Línea de suscriptor digital</li>
+                    <li>Es una solución de conectividad que utiliza los espectros de frecuencia no utilizados para el transporte de voz en la recepción mediante el par de cobre convencional</li>
+                    <li>Es una familia de tecnologías que proporcionan el acceso a Internet mediante la transmisión de datos digitales a través del par trenzado de hilos de cobre convencionales de la red telefónica básica o conmutada</li></ul></li></ul>
 
         <a href="#id0">Volver a índice</a>
         <br/><br/>

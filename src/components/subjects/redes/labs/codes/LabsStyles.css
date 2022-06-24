@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@500&display=swap');
+
+.code-container {
+    background-color: #75b7e0b1;
+    border-radius: 7px;
+    padding: 20px 30px;
+    line-height: 20pt;
+    letter-spacing: -0.1ch;
+    font-family: 'Source Code Pro', monospace;
+    display: flex;
+    justify-content: space-between;
+}
+
+.code-container>Button {
+    align-self: flex-start;
+}
+
+.code-container>ul {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.labs-notes {
+    color: green; 
+    font-size: 13
+}
+
+.labs-code-container-ul {
+    margin: 0;
+}
+
+.labs-code-container-text-selected {
+    color: blue;
+}

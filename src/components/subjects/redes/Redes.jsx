@@ -1,36 +1,33 @@
 import React from 'react';
-import Button from '@mui/material/Button'
 import Class from './class/codes/Class'
 import Labs from './labs/codes/Labs';
+import Tools from './tools/codes/Tools';
+import TabButton from '../../auxiliar/TabButton';
+import { Routes, Route, Navigate } from "react-router-dom";
 
 function Redes() {
-  const [selectedOption, setSelectedOption] = React.useState('0');
-  const selectTeoria = () => { setSelectedOption('1'); };
-  const selectLab = () => { setSelectedOption('2'); };
-  const selectNothing = () => { setSelectedOption('0'); };
 
   return (
-    <div style={{marginTop: 10, marginBottom: 20 }}>
-      {
-        (selectedOption == '0') ? (
-          <div>
-            <Button variant="outlined" style={{marginRight: 10}} onClick={selectTeoria}>Teoría</Button>
-            <Button variant="outlined" onClick={selectLab}>Labs</Button>
-          </div>
-        ) : (selectedOption == '1') ? (
-          <div>
-            <Button variant="outlined" onClick={selectNothing}>Volver</Button>
-            <Class></Class>
-          </div>
-        ) : (
-          <div>
-            <Button variant="outlined" onClick={selectNothing}>Volver</Button>
-            <Labs></Labs>
-          </div>
-        )
-      }
+
+    <div>
+      <div style={{ width: '75%', height: '50px', position: 'fixed', top: '64px', left: '0', zIndex: '2', margin: '0 12.40%' }}>
+        <div style={{ display: 'flex', alignItems: 'center', width: '100%', height: '100%', backgroundColor: 'white' }}>
+          <TabButton to="theory" text="Teoría" />
+          <TabButton to="labs" text="Laboratorios" />
+          <TabButton to="tools" text="Herramientas" />
+        </div>
+      </div>
+      <div style={{ margin: '50px 0 20px 0', }}>
+        <Routes>
+          <Route path="/"       element={ <Navigate to="/subjects/redes/theory" /> } />
+          <Route path="theory"  element={ <Class /> } />
+          <Route path="labs"    element={ <Labs /> } />
+          <Route path="tools/*" element={ <Tools /> } />
+        </Routes>
+      </div>
     </div>
   );
 }
 
 export default Redes;
+

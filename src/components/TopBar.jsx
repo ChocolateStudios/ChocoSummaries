@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
+import { Link } from "react-router-dom";
 
 const darkTheme = createTheme({
     palette: {
@@ -18,7 +19,7 @@ const darkTheme = createTheme({
 
 const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
-function TopBar(props) {
+function TopBar() {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <ThemeProvider theme={darkTheme}>
@@ -27,10 +28,13 @@ function TopBar(props) {
                         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                             ChocoSummaries
                         </Typography>
-                        <Button color="inherit" onClick={props.selectNothing}>Inicio</Button>
+                        <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+                            <Button color="inherit">Inicio</Button>
+                        </Link>
+                        <Button color="inherit" href='https://drchocolate-tutorials.web.app/' target='_blank' rel="noopener">Tutoriales</Button>
                     </Toolbar>
                 </AppBar>
-                <Offset/>
+                <Offset />
             </ThemeProvider>
         </Box>
     );
